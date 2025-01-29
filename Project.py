@@ -14,16 +14,16 @@ while True :
         break
 
     elif op == 1 :
-        type_task = input("Digite o nome/tipo da tarefa: ")
-        time_task = input("Digite o horário da tarefa: ")
+        type_task = input("Digite o nome da tarefa: ")
+        time_task = input("Digite o prazo da tarefa: ")
         prior_task = input("Digite o nível de prioridade da tarefa: ")
-        task = {'tipo/nome' : type_task, 'horário' : time_task, 'prioridade': prior_task}
+        task = {'nome' : type_task, 'gerencia' : username, 'horário' : time_task, 'prioridade': prior_task}
         list_task.append(task)
 
     elif op == 2 :
         remove = input("Digite o nome do item que deseja remover: ")
         for i in list_task :
-            if remove == i['tipo/nome']:
+            if remove == i['nome']:
                 print("Tarefa encontrada! Removendo...")
                 list_task.remove(i)
                 break
